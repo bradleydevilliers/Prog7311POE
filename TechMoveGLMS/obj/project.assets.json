@@ -3094,11 +3094,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lab_services_student\\Prog7311POE\\TechMoveGLMS\\TechMoveGLMS.csproj",
+      "projectUniqueName": "C:\\Users\\lab_services_student\\Documents\\GitHub\\prog7311-2026-poe-bradleydevilliers\\Prog7311POE\\TechMoveGLMS\\TechMoveGLMS.csproj",
       "projectName": "TechMoveGLMS",
-      "projectPath": "C:\\Users\\lab_services_student\\Prog7311POE\\TechMoveGLMS\\TechMoveGLMS.csproj",
+      "projectPath": "C:\\Users\\lab_services_student\\Documents\\GitHub\\prog7311-2026-poe-bradleydevilliers\\Prog7311POE\\TechMoveGLMS\\TechMoveGLMS.csproj",
       "packagesPath": "C:\\Users\\lab_services_student\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lab_services_student\\Prog7311POE\\TechMoveGLMS\\obj\\",
+      "outputPath": "C:\\Users\\lab_services_student\\Documents\\GitHub\\prog7311-2026-poe-bradleydevilliers\\Prog7311POE\\TechMoveGLMS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

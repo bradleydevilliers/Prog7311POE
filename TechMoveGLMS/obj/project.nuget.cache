@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qqtHkvgX4T4=",
+  "dgSpecHash": "Ukd/IlTVHxg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\lab_services_student\\Prog7311POE\\TechMoveGLMS\\TechMoveGLMS.csproj",
+  "projectFilePath": "C:\\Users\\lab_services_student\\Documents\\GitHub\\prog7311-2026-poe-bradleydevilliers\\Prog7311POE\\TechMoveGLMS\\TechMoveGLMS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lab_services_student\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\lab_services_student\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
