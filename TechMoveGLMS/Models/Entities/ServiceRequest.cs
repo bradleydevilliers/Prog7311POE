@@ -23,7 +23,7 @@ namespace TechMoveGLMS.Models.Entities
         public string ServiceLevel { get; set; }
         
         [DataType(DataType.Currency)]
-        public decimal LocalCost { get; set; } // Stored in ZAR
+        public decimal LocalCost { get; set; } // Stored in ZAR (Rand)
         
         public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
