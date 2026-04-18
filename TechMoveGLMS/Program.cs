@@ -1,9 +1,23 @@
+using Microsoft.EntityFrameworkCore;
+using TechMoveGLMS.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// Register DbContext
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 var app = builder.Build();
+// AUTO-CREATE DATABASE AND TABLES ON STARTUP
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    dbContext.Database.EnsureCreated();
+    Console.WriteLine(" Database and tables created/verified successfully!");
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
