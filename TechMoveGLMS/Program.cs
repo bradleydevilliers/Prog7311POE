@@ -1,10 +1,23 @@
 using Microsoft.EntityFrameworkCore;
 using TechMoveGLMS.Data;
+using TechMoveGLMS.Services.Contracts;
+using TechMoveGLMS.Services.Notifications;
+using TechMoveGLMS.Services.Pricing;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Register Factory Method Pattern
+builder.Services.AddScoped<IContractFactory, ContractFactory>();
+// Register Observer Pattern services
+builder.Services.AddSingleton<NotificationService>();
+builder.Services.AddScoped<INotificationObserver, EmailNotifier>();
+builder.Services.AddScoped<INotificationObserver, ComplianceLogger>();
+  
+// Register Strategy Pattern services
+builder.Services.AddScoped<PricingContext>();
 
 // Register DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
