@@ -3,11 +3,15 @@ using TechMoveGLMS.Data;
 using TechMoveGLMS.Services.Contracts;
 using TechMoveGLMS.Services.Notifications;
 using TechMoveGLMS.Services.Pricing;
+using TechMoveGLMS.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Register HttpClient for Currency API
+builder.Services.AddHttpClient<CurrencyService>();
 
 // Register Factory Method Pattern
 builder.Services.AddScoped<IContractFactory, ContractFactory>();
