@@ -1,0 +1,50 @@
+@model TechMoveGLMS.Models.ViewModels.ContractViewModel
+
+@{
+    ViewData["Title"] = "Create Contract";
+}
+
+<h1>Create Contract</h1>
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    
+    <div class="form-group mb-3">
+        <label asp-for="ClientId" class="control-label"></label>
+        <select asp-for="ClientId" class="form-control" asp-items="Model.Clients">
+            <option value="">-- Select Client --</option>
+        </select>
+        <span asp-validation-for="ClientId" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group mb-3">
+        <label asp-for="ServiceLevel" class="control-label"></label>
+        <select asp-for="ServiceLevel" class="form-control" asp-items="Model.ServiceLevels"></select>
+        <span asp-validation-for="ServiceLevel" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group mb-3">
+        <label asp-for="StartDate" class="control-label"></label>
+        <input asp-for="StartDate" class="form-control" type="date" />
+        <span asp-validation-for="StartDate" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group mb-3">
+        <label asp-for="EndDate" class="control-label"></label>
+        <input asp-for="EndDate" class="form-control" type="date" />
+        <span asp-validation-for="EndDate" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group mb-3">
+        <label asp-for="SignedAgreement" class="control-label">Signed Agreement (PDF only)</label>
+        <input asp-for="SignedAgreement" class="form-control" type="file" accept=".pdf" />
+        <span asp-validation-for="SignedAgreement" class="text-danger"></span>
+        <small class="form-text text-muted">Only PDF files are accepted.</small>
+    </div>
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</form>
+
