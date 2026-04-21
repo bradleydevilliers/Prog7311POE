@@ -9,7 +9,7 @@ namespace TechMoveGLMS.Data
             : base(options) 
         { 
         }
-        
+        public DbSet<User> Users { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<Contract> Contracts { get; set; }
         public DbSet<ServiceRequest> ServiceRequests { get; set; }
