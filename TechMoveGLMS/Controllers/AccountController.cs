@@ -42,8 +42,14 @@ namespace TechMoveGLMS.Controllers
         // GET: Account/Register
         public IActionResult Register()
         {
-            ViewBag.Clients = new SelectList(_context.Clients, "Id", "Name");
-            return View();
+
+           var model = new RegisterViewModel
+               {
+                 Clients = _context.Clients
+                 .Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name })
+                 .ToList()
+                 };
+            return View(model);
         }
         
         // POST: Account/Register
@@ -52,12 +58,27 @@ namespace TechMoveGLMS.Controllers
         {
             if (ModelState.IsValid)
             {
+             // Check if email already exists
+             if (_context.Users.Any(u => u.Email == model.Email))
+                {
+                 ModelState.AddModelError("Email", "This email is already registered.");
+                }
+             else
+            {
+            
                 await _authService.RegisterAsync(model.Email, model.Password, "Client", model.ClientId);
+            TempData["Success"] = "Registration successful! Please login.";
                 return RedirectToAction("Login");
+             }
             }
-            ViewBag.Clients = new SelectList(_context.Clients, "Id", "Name");
-            return View(model);
+          // Repopulate the Clients dropdown if validation fails
+             model.Clients = _context.Clients
+                .Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name })
+                .ToList();
+    
+             return View(model);
         }
+
         
         // GET: Account/Logout
         public IActionResult Logout()

@@ -1,7 +1,11 @@
 @model IEnumerable<TechMoveGLMS.Models.Entities.Contract>
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
 
 @{
     ViewData["Title"] = "Contracts";
+     var userRole = HttpContextAccessor.HttpContext?.Session.GetString("UserRole");
+    var isAdmin = userRole == "Admin";
 }
 
 <h1>Contracts</h1>
@@ -46,6 +50,12 @@
                         </a>
                     }
                 </td>
+                 @if (isAdmin)
+                {
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edit</a>
+                    </td>
+                }
             </tr>
         }
     </tbody>
