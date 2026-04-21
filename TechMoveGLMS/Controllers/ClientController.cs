@@ -2,28 +2,59 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TechMoveGLMS.Data;
 using TechMoveGLMS.Models.Entities;
-
+using TechMoveGLMS.Services;
 namespace TechMoveGLMS.Controllers
 {
     public class ClientController : Controller
     {
         private readonly ApplicationDbContext _context;
-        
-        public ClientController(ApplicationDbContext context)
+        private readonly AuthService _authService;
+        public ClientController(ApplicationDbContext context,AuthService authService)
         {
             _context = context;
+            _authService = authService;
         }
         
         // GET: Client
         public async Task<IActionResult> Index()
         {
-            var clients = await _context.Clients.ToListAsync();
-            return View(clients);
+            // Check if user is logged in
+            var currentUser = _authService.GetCurrentUser();
+            if (currentUser == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+             // Admins see all clients, Clients see only themselves
+            if (_authService.IsAdmin())
+            {
+                // Admin: Show all clients
+                var clients = await _context.Clients.ToListAsync();
+                return View(clients);
+            }
+            else
+            {
+                // Client: Show only their own client record
+                if (currentUser.ClientId != null)
+                {
+                    var client = await _context.Clients
+                        .Where(c => c.Id == currentUser.ClientId)
+                        .ToListAsync();
+                    return View(client);
+                }
+                // If client user has no linked ClientId, show empty
+                return View(new List<Client>());
+            }
         }
+                
         
         //  Client/Create
         public IActionResult Create()
         {
+             // Only Admin can create clients
+            if (!_authService.IsAdmin())
+            {
+                return RedirectToAction("AccessDenied", "Account");
+            }
             return View();
         }
         
@@ -32,6 +63,11 @@ namespace TechMoveGLMS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Client client)
         {
+            // Only Admin can create clients
+            if (!_authService.IsAdmin())
+            {
+                return RedirectToAction("AccessDenied", "Account");
+            }
             if (ModelState.IsValid)
             {
                 _context.Add(client);
@@ -44,7 +80,11 @@ namespace TechMoveGLMS.Controllers
         // Client/Edit
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null) return NotFound();
+            // Only Admin can edit clients
+            if (!_authService.IsAdmin())
+            {
+                return RedirectToAction("AccessDenied", "Account");
+            }
             
             var client = await _context.Clients.FindAsync(id);
             if (client == null) return NotFound();
@@ -57,6 +97,12 @@ namespace TechMoveGLMS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Client client)
         {
+            // Only Admin can edit clients
+            if (!_authService.IsAdmin())
+            {
+                return RedirectToAction("AccessDenied", "Account");
+            }
+            
             if (id != client.Id) return NotFound();
             
             if (ModelState.IsValid)
@@ -71,6 +117,11 @@ namespace TechMoveGLMS.Controllers
         // GET: Client/Delete
         public async Task<IActionResult> Delete(int? id)
         {
+            // Only Admin can delete clients
+            if (!_authService.IsAdmin())
+            {
+                return RedirectToAction("AccessDenied", "Account");
+            }
             if (id == null) return NotFound();
             
             var client = await _context.Clients.FindAsync(id);
@@ -84,6 +135,11 @@ namespace TechMoveGLMS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+             // Only Admin can delete clients
+            if (!_authService.IsAdmin())
+            {
+                return RedirectToAction("AccessDenied", "Account");
+            }
             var client = await _context.Clients.FindAsync(id);
             if (client != null)
             {
@@ -91,6 +147,25 @@ namespace TechMoveGLMS.Controllers
                 await _context.SaveChangesAsync();
             }
             return RedirectToAction(nameof(Index));
+        }
+        // GET: Client/Details
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null) return NotFound();
+            
+            var client = await _context.Clients
+                .Include(c => c.Contracts)
+                .FirstOrDefaultAsync(c => c.Id == id);
+                
+            if (client == null) return NotFound();
+            
+            // Check if user can access this client
+            if (!_authService.CanAccessClient(client.Id))
+            {
+                return RedirectToAction("AccessDenied", "Account");
+            }
+            
+            return View(client);
         }
     }
 }
