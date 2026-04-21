@@ -14,7 +14,7 @@ namespace TechMoveGLMS.Services.Contracts
                 StartDate = startDate,
                 EndDate = endDate,
                 ServiceLevel = serviceLevel,
-                Status = "Draft"
+                Status = "Active"
             };
             
             // Apply service level specific defaults

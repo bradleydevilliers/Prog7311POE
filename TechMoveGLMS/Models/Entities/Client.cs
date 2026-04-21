@@ -18,5 +18,6 @@ namespace TechMoveGLMS.Models.Entities
         
         // Navigation property - One client has many contracts
         public List<Contract> Contracts { get; set; } = new();
+        public List<User> Users { get; set; } = new();
     }
 }
