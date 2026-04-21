@@ -14,20 +14,20 @@ a {
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
-  border-color: #1861ac;
+  border-color: #a7620e;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
+  color: #c3b5b5ba;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #c6c0c0d7;
 }
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #7978786f;
 }
 
 .box-shadow {
