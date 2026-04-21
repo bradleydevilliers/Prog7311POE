@@ -26,7 +26,18 @@ builder.Services.AddScoped<PricingContext>();
 // Register DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+// Add session support
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromHours(8);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
+// Register AuthService
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<AuthService>();
 var app = builder.Build();
 // AUTO-CREATE DATABASE AND TABLES ON STARTUP
 using (var scope = app.Services.CreateScope())
@@ -46,6 +57,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
+app.UseSession();
 
 app.UseAuthorization();
 
@@ -58,3 +70,10 @@ app.MapControllerRoute(
 
 
 app.Run();
+
+using (var scope = app.Services.CreateScope())
+{
+    var authService = scope.ServiceProvider.GetRequiredService<AuthService>();
+    await authService.EnsureAdminExistsAsync();
+    Console.WriteLine(" Admin account verified!");
+}
