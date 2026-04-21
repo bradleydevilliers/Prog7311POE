@@ -1,8 +1,40 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "TechMove GLMS";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">TechMove Global Logistics Management System</h1>
+   <p class="lead">Enterprise logistics management solution</p>
+   <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Clients</h5>
+                    <p class="card-text">Manage client information, contact details, and regions.</p>
+                    <a asp-controller="Client" asp-action="Index" class="btn btn-primary">Manage Clients</a>
+                    <a asp-controller="Client" asp-action="Create" class="btn btn-outline-secondary">Add Client</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Contracts</h5>
+                    <p class="card-text">Create and manage service contracts with PDF agreement uploads.</p>
+                    <a asp-controller="Contract" asp-action="Index" class="btn btn-primary">View Contracts</a>
+                    <a asp-controller="Contract" asp-action="Create" class="btn btn-outline-secondary">New Contract</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Service Requests</h5>
+                    <p class="card-text">Create service requests with automatic USD to ZAR conversion.</p>
+                    <a asp-controller="ServiceRequest" asp-action="Index" class="btn btn-primary">View Requests</a>
+                    <a asp-controller="ServiceRequest" asp-action="Create" class="btn btn-outline-secondary">New Request</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
