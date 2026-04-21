@@ -1,0 +1,46 @@
+@model IEnumerable<TechMoveGLMS.Models.Entities.ServiceRequest>
+
+@{
+    ViewData["Title"] = "Service Requests";
+}
+
+<h1>Service Requests</h1>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New Service Request</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Contract</th>
+            <th>Client</th>
+            <th>Description</th>
+            <th>Service Level</th>
+            <th>Status</th>
+            <th>Cost (ZAR)</th>
+            <th>Created</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>#@item.ContractId</td>
+                <td>@item.Contract?.Client?.Name</td>
+                <td>@item.Description</td>
+                <td>@item.ServiceLevel</td>
+                <td>@item.Status</td>
+                <td>R @item.LocalCost.ToString("F2")</td>
+                <td>@item.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+            </tr>
+        }
+    </tbody>
+</table>
