@@ -46,6 +46,13 @@ using (var scope = app.Services.CreateScope())
     dbContext.Database.EnsureCreated();
     Console.WriteLine(" Database and tables created/verified successfully!");
 }
+using (var scope = app.Services.CreateScope())
+{
+    var authService = scope.ServiceProvider.GetRequiredService<AuthService>();
+    await authService.EnsureAdminExistsAsync();
+    Console.WriteLine(" Admin account verified!");
+}
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -71,9 +78,3 @@ app.MapControllerRoute(
 
 app.Run();
 
-using (var scope = app.Services.CreateScope())
-{
-    var authService = scope.ServiceProvider.GetRequiredService<AuthService>();
-    await authService.EnsureAdminExistsAsync();
-    Console.WriteLine(" Admin account verified!");
-}

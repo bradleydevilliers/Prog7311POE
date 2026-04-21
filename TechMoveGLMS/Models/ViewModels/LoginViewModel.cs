@@ -4,14 +4,16 @@ namespace TechMoveGLMS.Models.ViewModels
 {
     public class LoginViewModel
     {
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Invalid email format")]
+         [Display(Name = "Email Address")]
         public string Email { get; set; } = string.Empty;
         
-        [Required]
+        [Required(ErrorMessage = "Password is required")]
         [DataType(DataType.Password)]
+        [Display(Name = "Password")]
         public string Password { get; set; } = string.Empty;
-        
+         [Display(Name = "Remember Me")]
         public bool RememberMe { get; set; }
     }
 }
