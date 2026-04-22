@@ -32,6 +32,7 @@ body {
 
 
 /* Modern CSS Reset and Base Styles */
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f4f7f6;
@@ -40,12 +41,13 @@ body {
 }
 
 /* Sticky Navbar with Gradient and Shadow */
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .navbar {
     background: linear-gradient(135deg, #0d2b3e 0%, #1a4b6d 100%) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     padding: 0.8rem 1rem;
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .navbar-brand {
     font-weight: 700;
     font-size: 1.6rem;
@@ -53,11 +55,11 @@ body {
     letter-spacing: -0.5px;
     transition: opacity 0.2s ease;
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .navbar-brand:hover {
     opacity: 0.9;
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 0.85) !important;
     font-weight: 500;
@@ -66,19 +68,21 @@ body {
     border-radius: 6px;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .navbar-nav .nav-link:hover {
     background-color: rgba(255, 255, 255, 0.15);
     color: #fff !important;
 }
 
 /* Main Container Padding */
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .container {
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
 /* Card Styles (Similar to modern dashboard cards) */
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .card {
     border: none;
     border-radius: 12px;
@@ -88,29 +92,30 @@ body {
     height: 100%;
     background: #ffffff;
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .card-body {
     padding: 2rem;
     text-align: center;
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .card-title {
     font-weight: 700;
     color: #0d2b3e;
     margin-bottom: 1rem;
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .card-text {
     color: #5a6a7a;
     margin-bottom: 1.5rem;
 }
 
 /* Button Styles */
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .btn {
     border-radius: 30px;
     padding: 0.6rem 1.8rem;
@@ -153,12 +158,12 @@ body {
     background: #e0a800;
     color: #212529;
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .btn-sm {
     padding: 0.4rem 1.2rem;
     font-size: 0.85rem;
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 /* Table Styles */
 .table {
     background: white;
@@ -167,12 +172,12 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     margin-top: 1.5rem;
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .table thead {
     background: #0d2b3e;
     color: white;
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .table thead th {
     font-weight: 600;
     text-transform: uppercase;
@@ -181,16 +186,16 @@ body {
     padding: 1rem;
     border: none;
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .table tbody tr {
     transition: background-color 0.15s ease;
     border-bottom: 1px solid #eef2f5;
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .table tbody tr:last-child {
     border-bottom: none;
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .table tbody tr:hover {
     background-color: #f8fbfd;
 }
@@ -200,7 +205,7 @@ body {
     vertical-align: middle;
     color: #2c3e50;
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 /* Form Styles */
 .form-control {
     border: 2px solid #e0e7ed;
@@ -208,12 +213,12 @@ body {
     padding: 0.7rem 1.2rem;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .form-control:focus {
     border-color: #1a4b6d;
     box-shadow: 0 0 0 4px rgba(26, 75, 109, 0.15);
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 /* Alert Styles */
 .alert {
     border-radius: 30px;
@@ -223,22 +228,22 @@ body {
     margin-bottom: 2rem;
     font-weight: 500;
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .alert-success {
     background: #d4edda;
     color: #155724;
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .alert-danger {
     background: #f8d7da;
     color: #721c24;
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 .alert-info {
     background: #d1ecf1;
     color: #0c5460;
 }
-
+/*(W3Schools 2026)(Bootstrap Team 2026)*/
 /* Footer */
 .footer {
     background-color: #ffffff !important;
@@ -247,3 +252,6 @@ body {
     margin-top: 3rem;
     color: #6c757d;
 }
+/* (Bootstrap Team ,2025) Examples [online] Available at: https://getbootstrap.com/docs/5.3/examples/ */
+/* (W3Schools ,2026) CSS Examples [online] Available at: https://www.w3schools.com/css/css_examples.asp */
+/* (W3Schools ,2026) CSS Templates[online] Available at: https://www.w3schools.com/css/css_templates.asp */
