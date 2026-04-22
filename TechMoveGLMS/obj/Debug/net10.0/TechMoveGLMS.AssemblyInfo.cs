@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TechMoveGLMS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70ae345199d3a54990ae98d761ba6b5bffd593e1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be2d67071f471875bef87106b58f361c45c2402e")]
 [assembly: System.Reflection.AssemblyProductAttribute("TechMoveGLMS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TechMoveGLMS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
