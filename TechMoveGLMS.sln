@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechMoveGLMS", "TechMoveGLMS\TechMoveGLMS.csproj", "{02A262F0-B0D7-4AD0-B9CD-F7F5B8CADDD4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechMoveGMLSTests", "TechMoveGMLSTests\TechMoveGMLSTests.csproj", "{01531FA4-52D2-48B7-A195-D164498646BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,18 @@ Global
 		{02A262F0-B0D7-4AD0-B9CD-F7F5B8CADDD4}.Release|x64.Build.0 = Release|Any CPU
 		{02A262F0-B0D7-4AD0-B9CD-F7F5B8CADDD4}.Release|x86.ActiveCfg = Release|Any CPU
 		{02A262F0-B0D7-4AD0-B9CD-F7F5B8CADDD4}.Release|x86.Build.0 = Release|Any CPU
+		{01531FA4-52D2-48B7-A195-D164498646BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01531FA4-52D2-48B7-A195-D164498646BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01531FA4-52D2-48B7-A195-D164498646BE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{01531FA4-52D2-48B7-A195-D164498646BE}.Debug|x64.Build.0 = Debug|Any CPU
+		{01531FA4-52D2-48B7-A195-D164498646BE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{01531FA4-52D2-48B7-A195-D164498646BE}.Debug|x86.Build.0 = Debug|Any CPU
+		{01531FA4-52D2-48B7-A195-D164498646BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01531FA4-52D2-48B7-A195-D164498646BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01531FA4-52D2-48B7-A195-D164498646BE}.Release|x64.ActiveCfg = Release|Any CPU
+		{01531FA4-52D2-48B7-A195-D164498646BE}.Release|x64.Build.0 = Release|Any CPU
+		{01531FA4-52D2-48B7-A195-D164498646BE}.Release|x86.ActiveCfg = Release|Any CPU
+		{01531FA4-52D2-48B7-A195-D164498646BE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
