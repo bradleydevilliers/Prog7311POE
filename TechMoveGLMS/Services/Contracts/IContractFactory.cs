@@ -1,5 +1,5 @@
 using TechMoveGLMS.Models.Entities;
-
+// (Refactoring Guru, 2026)
 namespace TechMoveGLMS.Services.Contracts
 {
     // Factory Method Pattern - Creator interface
@@ -8,3 +8,5 @@ namespace TechMoveGLMS.Services.Contracts
         Contract CreateContract(string serviceLevel, int clientId, DateTime startDate, DateTime endDate);
     }
 }
+// Refactoring Guru, 2026. [Factory] Design Pattern.[Online] Available at:
+// https://refactoring.guru/design-patterns/factory-method

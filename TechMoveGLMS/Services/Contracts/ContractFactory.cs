@@ -2,6 +2,8 @@ using TechMoveGLMS.Models.Entities;
 
 namespace TechMoveGLMS.Services.Contracts
 {
+   // (Refactoring Guru, 2026)
+   
     // Concrete Factory implementation
     public class ContractFactory : IContractFactory
     {
@@ -32,3 +34,5 @@ namespace TechMoveGLMS.Services.Contracts
         }
     }
 }
+// Refactoring Guru, 2026. [Factory] Design Pattern.[Online] Available at:
+// https://refactoring.guru/design-patterns/factory-method

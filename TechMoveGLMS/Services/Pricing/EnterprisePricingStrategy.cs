@@ -1,5 +1,7 @@
 namespace TechMoveGLMS.Services.Pricing
 {
+//(Refactoring Guru, 2026)
+
     public class EnterprisePricingStrategy : IPricingStrategy
     {
         private const decimal ENTERPRISE_DISCOUNT = 0.85m;
@@ -13,3 +15,5 @@ namespace TechMoveGLMS.Services.Pricing
         }
     }
 }
+// Refactoring Guru, 2026. [Strategy] Design Pattern.[Online] Available at:
+//https://refactoring.guru/design-patterns/strategy

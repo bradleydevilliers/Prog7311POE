@@ -17,3 +17,5 @@ namespace TechMoveGLMS.Services.Notifications
         }
     }
 }
+// Refactoring Guru, 2026. [Observer] Design Pattern.[Online] Available at:
+//https://refactoring.guru/design-patterns/observer

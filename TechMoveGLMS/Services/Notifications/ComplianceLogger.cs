@@ -1,5 +1,7 @@
 namespace TechMoveGLMS.Services.Notifications
 {
+//(Refactoring Guru, 2026)
+
     // Concrete Observer - Compliance logging for audit trail
     public class ComplianceLogger : INotificationObserver
     {
@@ -26,3 +28,5 @@ namespace TechMoveGLMS.Services.Notifications
         }
     }
 }
+// Refactoring Guru, 2026. [Observer] Design Pattern.[Online] Available at:
+//https://refactoring.guru/design-patterns/observer

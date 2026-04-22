@@ -1,5 +1,7 @@
 namespace TechMoveGLMS.Services.Pricing
 {
+//(Refactoring Guru, 2026)
+
     public class PricingContext
     {
         private IPricingStrategy _strategy;
@@ -28,3 +30,5 @@ namespace TechMoveGLMS.Services.Pricing
         }
     }
 }
+// Refactoring Guru, 2026. [Strategy] Design Pattern.[Online] Available at:
+//https://refactoring.guru/design-patterns/strategy
