@@ -2,6 +2,7 @@ using System.Text.Json;
 
 namespace TechMoveGLMS.Services
 {
+    //(ExchangeRate-API,2026)(Microsoft,2026)
     public class CurrencyService
     {
         private readonly HttpClient _httpClient;
@@ -67,3 +68,9 @@ namespace TechMoveGLMS.Services
         }
     }
 }
+//ExchangeRate-API,2026. Exchange Rate API Documentation.[Online] Available at:
+//https://www.exchangerate-api.com/docs/overview
+
+// Microsoft, 2026. HttpClient Class Documentation.[Online] Available at:
+//https://learn.microsoft.com/en-us/dotnet/api/system.net.http.httpclient?view=net-10.0
+

@@ -3,7 +3,7 @@ using TechMoveGLMS.Data;
 using TechMoveGLMS.Models.Entities;
 using System.Security.Cryptography;
 using System.Text;
-
+//(Microsoft,2026)
 namespace TechMoveGLMS.Services
 {
     public class AuthService
@@ -115,3 +115,5 @@ namespace TechMoveGLMS.Services
         }
     }
 }
+// Microsoft, 2026. Session and State Management in ASP.NET Core.[Online] Available at:
+//https://learn.microsoft.com/en-us/aspnet/core/fundamentals/app-state?view=aspnetcore-10.0
