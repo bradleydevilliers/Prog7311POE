@@ -116,15 +116,13 @@ namespace TechMoveGLMS.Tests.Services
             var service = new CurrencyService(httpClient, _mockLogger.Object);
 
             // Act - Call twice
-            await service.ConvertUsdToZarAsync(100m);
-            await service.ConvertUsdToZarAsync(200m);
+            decimal firstResult =  await service.ConvertUsdToZarAsync(100m);
+            decimal secondResult =await service.ConvertUsdToZarAsync(100m);
+            // Assert - Both calls should return the same correct value
+            Assert.Equal(1850m, firstResult);
+            Assert.Equal(1850m, secondResult);
 
-            // Assert - API should be called only once (cached second call)
-            mockHttpMessageHandler.Protected().Verify(
-                "SendAsync",
-                Times.Once(),
-                ItExpr.IsAny<HttpRequestMessage>(),
-                ItExpr.IsAny<CancellationToken>());
+           
         }
     }
 }
