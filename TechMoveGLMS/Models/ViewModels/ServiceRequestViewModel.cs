@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.Rendering;
-
+//(Microsft,2026)
 namespace TechMoveGLMS.Models.ViewModels
 {
     public class ServiceRequestViewModel
@@ -29,3 +29,5 @@ namespace TechMoveGLMS.Models.ViewModels
         public List<SelectListItem>? ServiceLevels { get; set; }
     }
 }
+// Microsoft, 2026. Entity Framework Core Documentation.[Online]  Available at:
+//  https://learn.microsoft.com/en-us/ef/core/

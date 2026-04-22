@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
+//(Microsoft,2026)
 namespace TechMoveGLMS.Models.Entities
 {
     public class ServiceRequest
@@ -28,3 +28,5 @@ namespace TechMoveGLMS.Models.Entities
         public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
 }
+// Microsoft, 2026. Entity Framework Core Documentation.[Online]  Available at:
+//  https://learn.microsoft.com/en-us/ef/core/

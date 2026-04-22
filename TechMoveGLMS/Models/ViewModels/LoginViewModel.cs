@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-
+//(Microsoft,2026)
 namespace TechMoveGLMS.Models.ViewModels
 {
     public class LoginViewModel
@@ -17,3 +17,5 @@ namespace TechMoveGLMS.Models.ViewModels
         public bool RememberMe { get; set; }
     }
 }
+// Microsoft, 2026. Entity Framework Core Documentation.[Online]  Available at:
+//  https://learn.microsoft.com/en-us/ef/core/

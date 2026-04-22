@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-
+//(Microsoft,2026)
 namespace TechMoveGLMS.Models.Entities
 {
     public class Client
@@ -21,3 +21,5 @@ namespace TechMoveGLMS.Models.Entities
         public List<User> Users { get; set; } = new();
     }
 }
+// Microsoft, 2026. Entity Framework Core Documentation.[Online]  Available at:
+//  https://learn.microsoft.com/en-us/ef/core/
