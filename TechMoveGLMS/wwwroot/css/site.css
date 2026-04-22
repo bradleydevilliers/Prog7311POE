@@ -29,3 +29,221 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+
+/* Modern CSS Reset and Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Sticky Navbar with Gradient and Shadow */
+.navbar {
+    background: linear-gradient(135deg, #0d2b3e 0%, #1a4b6d 100%) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 0.8rem 1rem;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #fff !important;
+    letter-spacing: -0.5px;
+    transition: opacity 0.2s ease;
+}
+
+.navbar-brand:hover {
+    opacity: 0.9;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 500;
+    margin-left: 1rem;
+    padding: 0.5rem 1rem !important;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff !important;
+}
+
+/* Main Container Padding */
+.container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Card Styles (Similar to modern dashboard cards) */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
+    height: 100%;
+    background: #ffffff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.card-title {
+    font-weight: 700;
+    color: #0d2b3e;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: #5a6a7a;
+    margin-bottom: 1.5rem;
+}
+
+/* Button Styles */
+.btn {
+    border-radius: 30px;
+    padding: 0.6rem 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+    box-shadow: 0 8px 12px rgba(21, 101, 192, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-outline-secondary {
+    border: 2px solid #ced4da;
+    color: #495057;
+    background: transparent;
+}
+
+.btn-outline-secondary:hover {
+    background: #6c757d;
+    border-color: #6c757d;
+    color: white;
+}
+
+.btn-warning {
+    background: #ffc107;
+    border: none;
+    color: #212529;
+}
+.btn-warning:hover {
+    background: #e0a800;
+    color: #212529;
+}
+
+.btn-sm {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.85rem;
+}
+
+/* Table Styles */
+.table {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 1.5rem;
+}
+
+.table thead {
+    background: #0d2b3e;
+    color: white;
+}
+
+.table thead th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    padding: 1rem;
+    border: none;
+}
+
+.table tbody tr {
+    transition: background-color 0.15s ease;
+    border-bottom: 1px solid #eef2f5;
+}
+
+.table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.table tbody tr:hover {
+    background-color: #f8fbfd;
+}
+
+.table td {
+    padding: 1rem;
+    vertical-align: middle;
+    color: #2c3e50;
+}
+
+/* Form Styles */
+.form-control {
+    border: 2px solid #e0e7ed;
+    border-radius: 30px;
+    padding: 0.7rem 1.2rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: #1a4b6d;
+    box-shadow: 0 0 0 4px rgba(26, 75, 109, 0.15);
+}
+
+/* Alert Styles */
+.alert {
+    border-radius: 30px;
+    border: none;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.alert-info {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+/* Footer */
+.footer {
+    background-color: #ffffff !important;
+    border-top: 1px solid #e9ecef !important;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    color: #6c757d;
+}
