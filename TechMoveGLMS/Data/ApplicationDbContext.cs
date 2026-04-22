@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TechMoveGLMS.Models.Entities;
-
+//(Microsoft,2026)
 namespace TechMoveGLMS.Data
 {
     public class ApplicationDbContext : DbContext
@@ -33,3 +33,5 @@ namespace TechMoveGLMS.Data
         }
     }
 }
+// Microsoft, 2026. DbContext Lifetime, Configuration, and Initialization.[Online] Available at: 
+//https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/
