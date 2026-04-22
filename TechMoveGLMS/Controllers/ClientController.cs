@@ -5,6 +5,7 @@ using TechMoveGLMS.Models.Entities;
 using TechMoveGLMS.Services;
 namespace TechMoveGLMS.Controllers
 {
+    //(Microsoft,2026)
     public class ClientController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -169,3 +170,5 @@ namespace TechMoveGLMS.Controllers
         }
     }
 }
+//Microsoft, 2026. ASP.NET Core MVC Overview.[Online] Available at:
+//https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-10.0

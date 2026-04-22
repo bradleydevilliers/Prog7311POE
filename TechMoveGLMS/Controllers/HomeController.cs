@@ -2,7 +2,7 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using TechMoveGLMS.Models;
 using TechMoveGLMS.Services;
-
+//(MIcrosoft,2026)
 namespace TechMoveGLMS.Controllers;
 
 public class HomeController : Controller
@@ -34,3 +34,6 @@ public class HomeController : Controller
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }
+
+//Microsoft, 2026. ASP.NET Core MVC Overview.[Online] Available at:
+//https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-10.0

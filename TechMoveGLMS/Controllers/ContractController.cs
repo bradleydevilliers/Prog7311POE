@@ -9,6 +9,7 @@ using TechMoveGLMS.Services.Notifications;
 
 namespace TechMoveGLMS.Controllers
 {
+    //(Microsoft,2026)
     public class ContractController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -293,3 +294,5 @@ namespace TechMoveGLMS.Controllers
     }
  
 }       
+//Microsoft, 2026. ASP.NET Core MVC Overview.[Online] Available at:
+//https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-10.0

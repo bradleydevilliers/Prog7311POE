@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using TechMoveGLMS.Data;
 using TechMoveGLMS.Services;
 using TechMoveGLMS.Models.ViewModels;
-
+//(Mirosoft,2026)
 namespace TechMoveGLMS.Controllers
 {
     public class AccountController : Controller
@@ -94,3 +94,5 @@ namespace TechMoveGLMS.Controllers
         }
     }
 }
+//Microsoft, 2026. ASP.NET Core MVC Overview.[Online] Available at:
+//https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-10.0

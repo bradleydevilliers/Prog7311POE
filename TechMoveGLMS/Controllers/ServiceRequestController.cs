@@ -7,7 +7,7 @@ using TechMoveGLMS.Models.ViewModels;
 using TechMoveGLMS.Services;
 using TechMoveGLMS.Services.Notifications;
 using TechMoveGLMS.Services.Pricing;
-
+//(Microsoft,2026)
 namespace TechMoveGLMS.Controllers
 {
     public class ServiceRequestController : Controller
@@ -148,3 +148,5 @@ namespace TechMoveGLMS.Controllers
         }
     }
 }
+//Microsoft, 2026. ASP.NET Core MVC Overview.[Online] Available at:
+//https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-10.0
